@@ -102,11 +102,8 @@
                 android:layout_height="@dimen/ic_height"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-<<<<<<< HEAD
-                android:src="@drawable/ic_audiotrack_black_24dp"
-                android:layout_gravity="center"/>
-=======
-                android:src="@drawable/ic_pronite2" />
+                android:src="@drawable/ic_audiotrack_black_24dp"/>
+
 
 >>>>>>> d6a879b3e8837b613b23b9d08b7229c126914cde
             <TextView
@@ -131,13 +128,10 @@
                 android:layout_height="@dimen/ic_height"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-<<<<<<< HEAD
-                android:src="@drawable/ic_vpn_key_black_24dp"
-                android:layout_gravity="center"/>
-=======
-                android:src="@drawable/ic_touch_app" />
+                android:src="@drawable/ic_vpn_key_black_24dp" />
 
->>>>>>> d6a879b3e8837b613b23b9d08b7229c126914cde
+
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
