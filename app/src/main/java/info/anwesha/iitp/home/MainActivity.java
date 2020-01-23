@@ -40,7 +40,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import info.anwesha.iitp.Auth.LoginRegisterActivity;
 import info.anwesha.iitp.BuildConfig;
 import info.anwesha.iitp.R;
-import info.anwesha.iitp.SplashActivity;
+
 import info.anwesha.iitp.events.EventDetailsFragment;
 import info.anwesha.iitp.events.EventsRecyclerAdapter;
 
