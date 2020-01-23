@@ -39,9 +39,11 @@ import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.Calendar;
 
+import info.anwesha.iitp.Auth.LoginRegisterActivity;
+
 import info.anwesha.iitp.BuildConfig;
 import info.anwesha.iitp.R;
-import info.anwesha.iitp.Auth.LoginRegisterActivity;
+
 import info.anwesha.iitp.events.EventDetailsFragment;
 import info.anwesha.iitp.events.EventsRecyclerAdapter;
 
@@ -55,14 +57,15 @@ public class MainActivity extends AppCompatActivity implements EventsRecyclerAda
     private NavigationView navigationView;
     private AppUpdateManager appUpdateManager;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setBackgroundDrawableResource(R.drawable.back);
         setContentView(R.layout.activity_main);
 
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
@@ -74,8 +77,8 @@ public class MainActivity extends AppCompatActivity implements EventsRecyclerAda
         navAccount = menu.findItem(R.id.nav_account);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_events_cat, R.id.nav_ongoing, R.id.nav_pronite, R.id.nav_special_cat,
-                R.id.nav_gallery, R.id.nav_team, R.id.nav_sponsors, R.id.nav_maps, R.id.nav_developers, R.id.nav_account, R.id.nav_accomodation, R.id.nav_game_view)
+                R.id.nav_home, R.id.nav_events_cat, R.id.nav_pronite, R.id.nav_special_cat,
+                R.id.nav_gallery, R.id.nav_team, R.id.nav_sponsors, R.id.nav_maps, R.id.nav_developers, R.id.nav_account, R.id.nav_accomodation, R.id.nav_game,R.id.option_contact)
                 .setDrawerLayout(drawer)
                 .build();
 
@@ -136,9 +139,9 @@ public class MainActivity extends AppCompatActivity implements EventsRecyclerAda
     @Override
     protected void onResume() {
         super.onResume();
-        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("login_status", false))
-            navAccount.setTitle("Profile");
-        else navAccount.setTitle("Login/Register");
+//        if (PreferenceManager.getDefaultSharedPreferences(this).getBoolean("login_status", false))
+//            navAccount.setTitle("Profile");
+//        else navAccount.setTitle("Login/Register");
 
         new Handler().postDelayed(this::updateApp, 1000);
     }

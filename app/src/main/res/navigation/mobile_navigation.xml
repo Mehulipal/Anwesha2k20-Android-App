@@ -33,8 +33,8 @@
         tools:layout="@layout/fragment_pronite" />
 
     <fragment
-        android:id="@+id/nav_game_view"
-        android:name="info.anwesha.iitp.special.GameFragment"
+        android:id="@+id/nav_game"
+        android:name="info.anwesha.iitp.game.GameFragment"
         android:label="Challenging Game"
         tools:layout="@layout/fragment_game" />
     <fragment
@@ -59,7 +59,7 @@
     <fragment
         android:id="@+id/nav_ongoing"
         android:name="info.anwesha.iitp.ongoing.OngoingEventsFragment"
-        android:label="Ongoing Events"
+        android:label="News Feed"
         tools:layout="@layout/fragment_events" />
 
     <fragment
@@ -96,12 +96,13 @@
         android:label="Contact"
         tools:layout="@layout/fragment_contact_us" />
 
+
     <activity
         android:id="@+id/nav_maps"
         app:action="android.intent.action.VIEW"
         app:data="https://www.google.com/maps/d/viewer?mid=1NVE_tnItehFaMbEWddjL786SKtuCtq4X" />
 
-    <activity
+   <!-- <activity
         android:id="@+id/nav_theme"
         app:action="android.intent.action.VIEW"
         app:data="https://www.youtube.com/watch?v=0zq9wqsYZCw" />
@@ -109,6 +110,6 @@
     <activity
         android:id="@+id/afterMovie"
         app:action="android.intent.action.VIEW"
-        app:data="https://www.youtube.com/watch?v=tare6Drw0Ng" />
+        app:data="https://www.youtube.com/watch?v=tare6Drw0Ng" />-->
 
 </navigation>
