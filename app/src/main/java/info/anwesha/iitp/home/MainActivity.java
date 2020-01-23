@@ -40,6 +40,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 import info.anwesha.iitp.BuildConfig;
 import info.anwesha.iitp.R;
 import info.anwesha.iitp.Auth.LoginRegisterActivity;
+import info.anwesha.iitp.SplashActivity;
 import info.anwesha.iitp.events.EventDetailsFragment;
 import info.anwesha.iitp.events.EventsRecyclerAdapter;
 
@@ -52,12 +53,22 @@ public class MainActivity extends AppCompatActivity implements EventsRecyclerAda
     private SharedPreferences prefs;
     private NavigationView navigationView;
     private AppUpdateManager appUpdateManager;
+    private static int SPLASH_TIME_OUT=2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setBackgroundDrawableResource(R.drawable.back);
         setContentView(R.layout.activity_main);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent splashIntent=new Intent(MainActivity.this, SplashActivity.class);
+                startActivity(splashIntent);
+                finish();
+            }
+        },SPLASH_TIME_OUT);
 
         prefs = PreferenceManager.getDefaultSharedPreferences(this);
 
